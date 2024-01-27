@@ -543,6 +543,16 @@ header .container,
     pointer-events: auto;
 }
 
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
 .modal {
     width: 408px;
     min-height: 584px;
@@ -736,6 +746,99 @@ header .container,
 }
 
 /* MODAL END */
+
+@media screen and (min-width: 320px) {
+    body {
+    overflow-x: hidden;
+    width: 100%;
+    }
+
+    .container { 
+    padding: 0 16px;
+    }
+
+    .main-nav,
+    .contacts,
+    .strategy-svg-box {
+        display: none;
+    }
+
+    .header>.container {
+        height: 56px;
+    }
+
+    .header-menu {
+        display: block;
+        padding: 16px 0;
+    }
+
+    .main-title {
+        font-size: 36px;
+        margin-bottom: 48px;
+    }
+
+    .solutions {
+        height: 432px;
+        padding: 72px 0;
+    }
+
+    .strategy, .team, .portfolio, .bottom-section {
+        padding: 96px 0;
+    }
+
+    .strategy-list, .team-list, .portfolio-list, .bottom-container, .bottom-form {
+        flex-direction: column;
+    }
+
+    .strategy-title {
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .team-list, .strategy-list {
+        gap: 72px;
+    }
+
+    .portfolio-list-item {
+        width: auto;
+    }
+
+    .bottom-container {
+        align-items: center;
+    }
+
+    .bottom-webstudio-box, .bottom-socials {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 72px;
+    }
+
+    .bottom-form-wrapper {
+        text-align: center;
+    }
+
+    .bottom-description {
+        text-align: start;
+    }
+
+    .bottom-form {
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team-list, .portfolio-list {
+        align-items: center;
+    }
+
+    .team-card, .portfolio-list-item {
+        width: fit-content;
+    }
+
+    .bottom-form {
+        flex-direction: row;
+    }
+}
 
 .visually-hidden {
     position: absolute;

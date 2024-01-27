@@ -42,13 +42,18 @@
                     </li>
                 </ul>
             </address>
+            <a class="header-menu" href="">
+                <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </a>
         </div>
     </header>
     <main>
         <section class="solutions">
             <div class="container">
-                <h1 class="main-title">Effective Solutions<br> for Your Business</h1>
-                <button type="button" class="solutions-order">Order Service</button>
+                <h1 class="main-title">Effective Solutions<br> For Your Business</h1>
+                <button type="button" class="solutions-order" data-modal-open>Order Service</button>
             </div>
         </section>
         <section class="strategy">
@@ -416,9 +421,9 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-button">
+            <button type="button" class="modal-button" data-modal-close>
                 <svg class="modal-close-btn close-icon" width="8" height="8">
                     <use href="./images/icons.svg#icon-cross"></use>
                 </svg>
@@ -476,6 +481,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
