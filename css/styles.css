@@ -549,6 +549,12 @@ header .container,
     pointer-events: none;
 }
 
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .no-scroll {
     overflow: hidden;
 }
@@ -745,6 +751,10 @@ header .container,
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mobile-menu {
+    display: none;
+}
+
 /* MODAL END */
 
 @media screen and (min-width: 320px) {
@@ -782,12 +792,19 @@ header .container,
         padding: 72px 0;
     }
 
-    .strategy, .team, .portfolio, .bottom-section {
+    .strategy,
+    .team,
+    .portfolio,
+    .bottom-section {
         padding: 96px 0;
     }
 
     .strategy-list, .team-list, .portfolio-list, .bottom-container, .bottom-form {
         flex-direction: column;
+    }
+
+    .team-list, .portfolio-list {
+        align-items: center;
     }
 
     .strategy-title {
@@ -797,6 +814,10 @@ header .container,
 
     .team-list, .strategy-list {
         gap: 72px;
+    }
+
+    .team-card {
+        max-width: 264px;
     }
 
     .portfolio-list-item {
@@ -824,20 +845,151 @@ header .container,
     .bottom-form {
         align-items: center;
     }
+
+    .modal {
+        width: 288px;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 320px;
+        height: 100vh;
+        padding: 72px 16px 40px;
+    }
+
+    .mobile-menu-nav {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 168px;
+    }
+
+    .mobile-studio {
+        color: #404BBF;
+    }
+
+    .mobile-contacts-list {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .mobile-phone {
+        color: #4D5AE5;
+    }
+
+    .mobile-menu-contacts {
+        margin-bottom: 48px;
+    }
+
+    .mobile-contacts-item {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .mobile-socials-list {
+        display: flex;
+        gap: 40px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
-    .team-list, .portfolio-list {
-        align-items: center;
-    }
-
-    .team-card, .portfolio-list-item {
-        width: fit-content;
-    }
 
     .bottom-form {
         flex-direction: row;
     }
+
+    .modal {
+        width: 408px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .header-menu,
+    .mobile-menu {
+        display: none;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .main-nav,
+    .strategy-svg-box {
+        display: flex;
+    }
+
+    .contacts {
+        display: block;
+    }
+    
+    .header>.container {
+        height: auto;
+    }
+    
+    .main-title {
+        font-size: 56px;
+        margin-bottom: 48px;
+    }
+
+    .solutions {
+        height: 600px;
+        padding: 188px 0;
+    }
+    .strategy,
+    .team,
+    .portfolio {
+        padding: 120px 0;
+    }
+
+    .strategy-list,
+    .team-list,
+    .portfolio-list,
+    .bottom-container,
+    .bottom-form {
+        flex-direction: row;
+    }
+
+    .strategy-title {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .team-list,
+    .strategy-list {
+        gap: 24px;
+    }
+
+    .bottom-container {
+        align-items: baseline;
+    }
+
+    .bottom-webstudio-box,
+    .bottom-socials {
+        margin-right: 120px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .bottom-form-wrapper {
+        text-align: left;
+    }
+
+    .bottom-section {
+        padding: 100px 0;
+    }
+}
+
+@media (min-resolution: 192dpi) {
+  .solutions {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+    url(../images//people-office@2x.jpg);
+  }
 }
 
 .visually-hidden {
