@@ -42,7 +42,7 @@
                     </li>
                 </ul>
             </address>
-            <a class="header-menu" href="">
+            <a class="header-menu open-mobile-menu" href="">
                 <svg width="24" height="24">
                         <use href="./images/icons.svg#icon-menu"></use>
                 </svg>
@@ -53,7 +53,7 @@
         <section class="solutions">
             <div class="container">
                 <h1 class="main-title">Effective Solutions<br> For Your Business</h1>
-                <button type="button" class="solutions-order" data-modal-open>Order Service</button>
+                <button type="button" class="solutions-order">Order Service</button>
             </div>
         </section>
         <section class="strategy">
@@ -421,9 +421,9 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden">
         <div class="modal">
-            <button type="button" class="modal-button" data-modal-close>
+            <button type="button" class="modal-button">
                 <svg class="modal-close-btn close-icon" width="8" height="8">
                     <use href="./images/icons.svg#icon-cross"></use>
                 </svg>
@@ -473,16 +473,18 @@
                                 <use href="./images/icons.svg#icon-check"></use>
                             </svg>
                         </span>
-                        I accept the terms and conditions of the
-                        <a href="" class="check-text-link">Privacy Policy</a>
+                        <span class="check-text-privacy">
+                            I accept the terms and conditions of the
+                            <a href="" class="check-text-link">Privacy Policy</a>
+                        </span>
                     </label>    
                 </div>
                 <button class="modal-form-button" type="submit">Send</button>
             </form>
         </div>
     </div>
-    <div class="mobile-menu">
-        <button type="button" class="modal-button">
+    <div class="mobile-menu is-hidden">
+        <button type="button" class="mobile-close-button">
                 <svg class="modal-close-btn close-icon" width="8" height="8">
                     <use href="./images/icons.svg#icon-cross"></use>
                 </svg>
