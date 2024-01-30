@@ -1029,8 +1029,8 @@ header .container,
     .bottom-container {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
         align-items: baseline;
+        width: 584px;
     }
 
     .bottom-webstudio-box,
